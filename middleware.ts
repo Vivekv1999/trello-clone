@@ -14,7 +14,6 @@ console.log(isProtectedRoute, "isprotectedRoute");
 
 export default clerkMiddleware(
   (auth, req) => {
-    console.log(req, "auth middleware============================", auth);
     if (isProtectedRoute(req)) auth().protect();
 
     if (auth().orgId) {
