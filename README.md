@@ -40,3 +40,6 @@ npx shadcn-ui@latest add button
 https://www.youtube.com/watch?v=pRybm9lXW2c&t=545s
 larotix319@togito.com
 rotef27989@dxice.com
+
+//2:46:npm i zustand
+//2:46:npx sadcn-ui@latest add sheet

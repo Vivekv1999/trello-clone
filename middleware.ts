@@ -16,6 +16,10 @@ export default clerkMiddleware(
   (auth, req) => {
     if (isProtectedRoute(req)) auth().protect();
 
+    if (auth().userId && req.nextUrl.pathname === "/") {
+      const orgSelection = new URL("/select-org", req.url);
+      return NextResponse.redirect(orgSelection);
+    }
     if (auth().orgId) {
       NextResponse.redirect(req.url);
     }
