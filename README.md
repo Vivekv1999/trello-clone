@@ -43,3 +43,14 @@ rotef27989@dxice.com
 
 //2:46:npm i zustand
 //2:46:npx sadcn-ui@latest add sheet
+
+//3:04:44 npm i -D prisma
+//npx prisma init
+
+//npx prisma generate //- for locally create type and function for this new model we are added
+//npx prisma db push //-push to supabase sync
+npm i @prisama/client //--so we use prisma in our app.
+
+//npx prisma studio 3:20:00 //ui view db
+
+//npm i zod ///----for form validation
