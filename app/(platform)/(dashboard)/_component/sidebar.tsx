@@ -39,20 +39,11 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SlidebarProps) => {
   );
 
   const onExpand = (id: string) => {
-    console.log(id, "iiiiiiiddddddddddddddd");
-
     setExpanded((curr) => ({
       ...curr,
       [id]: !expanded[id],
     }));
   };
-
-  console.log(
-    expanded,
-    "exxxxxxxpandddd",
-    activeOrganization,
-    userMemberships.data
-  );
 
   if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading) {
     return (

@@ -7,11 +7,9 @@ import { FormInput } from "./form-input";
 
 export const Form = () => {
   const { execute, fieldErrors } = useAction(createBoard, {
-    onSucess: (data) => {
-      console.log(data, "Sucess");
-    },
+    onSucess: (data) => {},
     onError: (error) => {
-      console.log(error, "Error");
+      console.error(error, "Error");
     },
   });
   const onSubmit = (formData: FormData) => {
