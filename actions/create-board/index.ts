@@ -19,6 +19,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   let board;
   try {
+    // throw new Error("intentional error");
     board = await db.board.create({
       data: {
         title: title,

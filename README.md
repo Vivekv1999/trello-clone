@@ -54,3 +54,5 @@ npm i @prisama/client //--so we use prisma in our app.
 //npx prisma studio 3:20:00 //ui view db
 
 //npm i zod ///----for form validation
+
+//npm i sonner =---for toster
