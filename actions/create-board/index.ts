@@ -9,23 +9,44 @@ import { InputType, ReturnType } from "./types";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
   const userId = auth().userId;
-  if (!userId) {
+  const orgId = auth().orgId;
+  if (!userId || !orgId) {
     return {
       error: "Unautorized",
     };
   }
 
-  const { title } = data;
+  const { title, image } = data;
+  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHTML, imageUserName] =
+    image.split("|");
 
+  if (
+    !imageId ||
+    !imageFullUrl ||
+    !imageThumbUrl ||
+    !imageUserName ||
+    !imageLinkHTML
+  ) {
+    return {
+      error: "Missng fields. Failed to create board",
+    };
+  }
   let board;
   try {
     // throw new Error("intentional error");
     board = await db.board.create({
       data: {
-        title: title,
+        title,
+        orgId,
+        imageId,
+        imageThumbUrl,
+        imageFullUrl,
+        imageUserName,
+        imageLinkHTML,
       },
     });
   } catch (err) {
+    console.error(err, "error creating board");
     return {
       error: { err } + "Database Error",
     };

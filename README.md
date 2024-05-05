@@ -59,3 +59,7 @@ npm i @prisama/client //--so we use prisma in our app.
 //npm i sonner =---for toster
 
 //npm i unsplash-js --5:10:00
+
+////dbreset===========
+npx prisma migrate reset
+5:37:00 //npx prisma db push //----------async with postgres
