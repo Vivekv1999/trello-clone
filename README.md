@@ -40,6 +40,7 @@ npx shadcn-ui@latest add button
 https://www.youtube.com/watch?v=pRybm9lXW2c&t=545s
 larotix319@togito.com
 rotef27989@dxice.com
+//maroga8458@lewenbo.com --unsplash api
 
 //2:46:npm i zustand
 //2:46:npx sadcn-ui@latest add sheet
@@ -56,3 +57,5 @@ npm i @prisama/client //--so we use prisma in our app.
 //npm i zod ///----for form validation
 
 //npm i sonner =---for toster
+
+//npm i unsplash-js --5:10:00

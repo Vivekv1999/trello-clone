@@ -14,6 +14,7 @@ import { FormSubmit } from "./form-submit";
 import { createBoard } from "@/actions/create-board";
 import { useAction } from "@/Hooks/use-action";
 import { toast } from "sonner";
+import { FromPicker } from "./form-picker";
 
 interface FromPopOverProps {
   children: React.ReactNode;
@@ -41,6 +42,7 @@ export const FormPopOver = ({
 
   const onSubmit = (formData: FormData) => {
     const title = formData.get("title") as string;
+    const image = formData.get("image") as string;
 
     execute({ title });
   };
@@ -66,6 +68,7 @@ export const FormPopOver = ({
         </PopoverClose>
         <form action={onSubmit} className="space-y-4">
           <div className="space-y-4">
+            <FromPicker id="image" errors={fieldErrors} />
             <FormInput
               id="title"
               label="Board Title"
