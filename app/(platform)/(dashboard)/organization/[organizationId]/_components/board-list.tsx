@@ -11,7 +11,7 @@ const BoardList = async () => {
   const orgId = auth().orgId;
 
   if (!orgId) {
-    return redirect("/select-ord");
+    return redirect("/select-org");
   }
 
   const boards = await db.board.findMany({
@@ -31,7 +31,7 @@ const BoardList = async () => {
         {boards.map((board) => (
           <Link
             key={board.id}
-            href={`board/${board.id}`}
+            href={`/board/${board.id}`}
             className="group relative aspect-video bg-nno-repeat bg-center bg-cover bg-sky-700 rounded-sm h-full w-full p-2 overflow-hidden"
             style={{ backgroundImage: `url(${board.imageThumbUrl}` }}
           >

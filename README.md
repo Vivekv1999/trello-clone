@@ -63,3 +63,9 @@ npm i @prisama/client //--so we use prisma in our app.
 ////dbreset===========
 npx prisma migrate reset
 5:37:00 //npx prisma db push //----------async with postgres
+
+//5:58:00 ---npm i lodash
+//npm i -D @styles/lodash
+
+//----issue---
+https://github.com/prisma/prisma/discussions/22837---so change in env file (remove :6543/postgres from dataVase URL)
