@@ -69,3 +69,9 @@ npx prisma migrate reset
 
 //----issue---
 https://github.com/prisma/prisma/discussions/22837---so change in env file (remove :6543/postgres from dataVase URL)
+
+//-----prisma-6:47:00
+npx prisma migrate reset ---rest all databse value
+npx prisma db push
+npx prisma generate
+//--not ue in project--prisma generate --watch //TODO
