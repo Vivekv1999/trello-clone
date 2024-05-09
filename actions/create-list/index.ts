@@ -34,7 +34,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         boardId: boardId,
       },
       orderBy: { order: "desc" },
-      select: { order: true },
+      select: { order: true }, //only this field show in response
     });
     console.log(lastList, "lastList");
     const newOrder = lastList ? lastList.order + 1 : 1;
