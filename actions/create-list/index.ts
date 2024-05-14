@@ -19,6 +19,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   const { title, boardId } = data;
   let list;
   try {
+    //this will prevent any outside to craete new list
     const board = await db.board.findUnique({
       where: { id: boardId, orgId },
     });
@@ -29,6 +30,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       };
     }
 
+    //find last add list number
     const lastList = await db.list.findFirst({
       where: {
         boardId: boardId,
