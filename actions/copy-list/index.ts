@@ -58,6 +58,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
               desciption: card.desciption,
               order: card.order,
             })),
+            // skipDuplicates: true,
           },
         },
       },

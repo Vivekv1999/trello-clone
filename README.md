@@ -75,3 +75,5 @@ npx prisma migrate reset ---rest all databse value
 npx prisma db push
 npx prisma generate
 //--not ue in project--prisma generate --watch //TODO
+
+//npx shadcn-ui@latest add textarea 8:10:00
