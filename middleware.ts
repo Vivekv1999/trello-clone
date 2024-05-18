@@ -15,9 +15,11 @@ console.log(isProtectedRoute, "isprotectedRoute");
 export default clerkMiddleware(
   (auth, req) => {
     if (isProtectedRoute(req)) auth().protect();
-
+    const defaultOrgID = auth()?.orgId;
     if (auth().userId && req.nextUrl.pathname === "/") {
-      const orgSelection = new URL("/select-org", req.url);
+      const orgSelection = defaultOrgID
+        ? new URL(`/organization/${defaultOrgID}`, req.url)
+        : new URL("/select-org/", req.url);
       return NextResponse.redirect(orgSelection);
     }
     if (auth().orgId) {

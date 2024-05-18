@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
 import { List } from "@prisma/client";
-import { MoreHorizontal, X } from "lucide-react";
+import { MoreHorizontalIcon, X } from "lucide-react";
 import { ElementRef, useRef } from "react";
 import { toast } from "sonner";
 
@@ -59,9 +59,9 @@ export const ListOptions = ({ onAddCard, data }: ListOptionsProps) => {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button className="h-auto w-auto p-2" variant={"ghost"}>
-          <MoreHorizontal className="h-4 w-4" />
-        </Button>
+        <div className="h-auto w-auto p-2">
+          <MoreHorizontalIcon className="h-4 w-4" />
+        </div>
       </PopoverTrigger>
       <PopoverContent className="px-0 pt-3 pb-3" side="bottom" align="start">
         <div className="text-sm font-medium text-center text-neutral-600 pb-4">
