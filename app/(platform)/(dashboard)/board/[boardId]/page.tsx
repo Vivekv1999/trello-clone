@@ -23,6 +23,9 @@ const BoardIdPage = async ({ params }: BoardIdPageProps) => {
         orgId,
       },
     },
+    orderBy: {
+      order: "asc",
+    },
     include: {
       cards: {
         orderBy: {
@@ -31,6 +34,7 @@ const BoardIdPage = async ({ params }: BoardIdPageProps) => {
       },
     },
   });
+
   return (
     <div className="p-4 h-full overflow-x-auto">
       <ListContainer boardId={params.boardId} data={lists} />

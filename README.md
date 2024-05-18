@@ -77,3 +77,6 @@ npx prisma generate
 //--not ue in project--prisma generate --watch //TODO
 
 //npx shadcn-ui@latest add textarea 8:10:00
+
+8:32:00
+//--npm i @hello-pangea/dnd \_\_\_ for drag and drop
