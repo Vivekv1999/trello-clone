@@ -80,3 +80,9 @@ npx prisma generate
 
 8:32:00
 //--npm i @hello-pangea/dnd \_\_\_ for drag and drop
+
+9:08:00
+//npx shadcn-ui@latest add dialog
+
+9:13:00
+//npm i @tanstack/react-query
