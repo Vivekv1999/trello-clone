@@ -55,7 +55,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
           createMany: {
             data: listToCopy.cards.map((card) => ({
               title: card.title,
-              desciption: card.desciption,
+              description: card.description,
               order: card.order,
             })),
             // skipDuplicates: true,
@@ -72,7 +72,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     };
   }
 
-  revalidatePath(`/boARD/${boardId}`);
+  revalidatePath(`/board/${boardId}`);
   return { data: list };
 };
 
