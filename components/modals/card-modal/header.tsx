@@ -1,7 +1,7 @@
 "use client";
 
 import { useAction } from "@/Hooks/use-action";
-import { updateCard } from "@/actions/card-board";
+import { updateCard } from "@/actions/update-card";
 import { FormInput } from "@/components/form/form-input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CardWithList } from "@/types";
