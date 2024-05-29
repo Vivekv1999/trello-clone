@@ -86,3 +86,8 @@ npx prisma generate
 
 9:13:00
 //npm i @tanstack/react-query
+
+10:31
+//npx shadcn-ui@latest add avatar
+
+//npm i date-fns
