@@ -91,3 +91,6 @@ npx prisma generate
 //npx shadcn-ui@latest add avatar
 
 //npm i date-fns
+
+//npx prisma migrate reset --clear data base
+//npx prisma db push ---after clear dataBase run this command
