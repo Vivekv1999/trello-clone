@@ -41,6 +41,7 @@ https://www.youtube.com/watch?v=pRybm9lXW2c&t=545s
 larotix319@togito.com
 rotef27989@dxice.com
 //maroga8458@lewenbo.com --unsplash api
+//riliwe4558@hutov.com //4558---huv ==>@@@@STR\_\_\_IPE
 
 //2:46:npm i zustand
 //2:46:npx sadcn-ui@latest add sheet
@@ -94,3 +95,6 @@ npx prisma generate
 
 //npx prisma migrate reset --clear data base
 //npx prisma db push ---after clear dataBase run this command
+
+//11:05:35
+//npm i stripe
