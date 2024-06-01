@@ -10,9 +10,11 @@ import { redirect } from "next/navigation";
 import { ACTION, ENTITY_TYPE } from "@prisma/client";
 import { CreateAuditLog } from "@/lib/create-audit-log";
 import { decreseAvailableCount } from "@/lib/org-limit";
+import { checkSubscription } from "@/lib/subscription";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
+  const isPro = await checkSubscription();
 
   if (!userId || !orgId) {
     return {
@@ -31,7 +33,9 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     });
 
     //if user delete board thqan remove from free board count
-    await decreseAvailableCount();
+    if (!isPro) {
+      await decreseAvailableCount();
+    }
 
     await CreateAuditLog({
       entityTitle: board.title,
