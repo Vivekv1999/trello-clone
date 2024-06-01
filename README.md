@@ -98,3 +98,10 @@ npx prisma generate
 
 //11:05:35
 //npm i stripe
+
+//11:34:00
+add stripe cli zip for (locally webHook test)
+add test file in enviroumwnt variable
+
+stripe login =======>>>for this cmd and that path
+stripe listen --forward-to localhost:3000/api/webhook ======>>>>(this give you secrect key ########)
