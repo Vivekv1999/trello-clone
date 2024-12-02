@@ -41,7 +41,7 @@ export const ProModal = () => {
             </ol>
           </div>
           <Button
-            disabled={isLoading}
+            disabled={isLoading || true}
             className="w-full"
             variant="primary"
             onClick={onUpgrade}

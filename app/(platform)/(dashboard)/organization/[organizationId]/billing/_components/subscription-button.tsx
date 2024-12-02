@@ -30,7 +30,11 @@ export const SubscriptionButton = ({ isPro }: subscriptionButtonProps) => {
     }
   };
   return (
-    <Button variant={"primary"} onClick={onUpgrade} disabled={isLoading}>
+    <Button
+      variant={"primary"}
+      onClick={onUpgrade}
+      disabled={isLoading || true}
+    >
       {isPro ? "Manage subscription" : "Upgrade to pro"}
     </Button>
   );
